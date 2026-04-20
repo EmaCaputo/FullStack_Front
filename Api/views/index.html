@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arfuch Store</title>
+    <link rel="stylesheet" href="/styles/estilos.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo-container">
+        <div class="logo-box">
+            <a href="/">
+            <img src="/images/logoArfuch.jpg" alt="Logo Arfuch" class="logo">
+            </a>
+        </div>
+    <h1 class="titulo-marca">
+    Arfuch <br>
+    Indumentaria
+</h1>
+    </div>
+
+    <nav class="nav">
+    <ul class="menu">
+
+        <li><a href="#">Inicio</a></li>
+
+        <li class="dropdown">
+            <a href="#">Productos ▾</a>
+            <ul class="dropdown-content">
+                <li><a href="#">Remeras</a></li>
+                <li><a href="#">Buzos</a></li>
+                <li><a href="#">Camperas</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Contacto</a></li>
+         <li><a href="/login">Login</a></li>
+
+    </ul>
+</nav>
+
+    <div class="carrito-icono">
+        🛒 <span id="contador-carrito">0</span>
+    </div>
+</header>
+
+<main>
+    <h2>Nuestros Productos</h2>
+
+    <div class="contenedor-productos">
+
+        <div class="item-producto">
+            <img src="/images/RemeraLacostePima.jpg">
+            <h3>Remera Lacoste Pima</h3>
+            <h4>$5000</h4>
+            <button onclick="agregarAlCarrito('Remera Pima', 5000)">Comprar</button>
+        </div>
+
+        <div class="item-producto">
+            <img src="/images/RemeraLacosteAlgodonEstampa.jpg">
+            <h3>Remera Estampa</h3>
+            <h4>$25000</h4>
+            <button onclick="agregarAlCarrito('Remera Estampa', 25000)">Comprar</button>
+        </div>
+
+        <div class="item-producto">
+            <img src="/images/RemeraLacostePima.jpg">
+            <h3>Remera Premium</h3>
+            <h4>$55000</h4>
+            <button onclick="agregarAlCarrito('Remera Premium', 55000)">Comprar</button>
+        </div>
+
+        <div class="item-producto">
+            <img src="/images/RemeraLacosteAlgodonEstampa.jpg">
+            <h3>Remera Estampa</h3>
+            <h4>$25000</h4>
+            <button onclick="agregarAlCarrito('Remera Estampa', 25000)">Comprar</button>
+        </div>
+
+         <div class="item-producto">
+            <img src="/images/RemeraLacostePima.jpg">
+            <h3>Remera Premium</h3>
+            <h4>$55000</h4>
+            <button onclick="agregarAlCarrito('Remera Premium', 55000)">Comprar</button>
+        </div>
+
+        <div class="item-producto">
+            <img src="/images/RemeraLacosteAlgodonEstampa.jpg">
+            <h3>Remera Estampa</h3>
+            <h4>$25000</h4>
+            <button onclick="agregarAlCarrito('Remera Estampa', 25000)">Comprar</button>
+        </div>
+
+    </div>
+</main>
+
+<!-- 🛒 Carrito -->
+<div class="carrito">
+    <h3>Carrito</h3>
+    <div id="lista-carrito"></div>
+    <h4 id="total">Total: $0</h4>
+</div>
+
+<script>
+let carrito = [];
+let total = 0;
+
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre, precio });
+    total += precio;
+    renderCarrito();
+}
+
+function renderCarrito() {
+    const lista = document.getElementById('lista-carrito');
+    lista.innerHTML = '';
+
+    carrito.forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('item-carrito');
+        div.innerText = `${item.nombre} - $${item.precio}`;
+        lista.appendChild(div);
+    });
+
+    document.getElementById('total').innerText = `Total: $${total}`;
+
+}
+</script>
+
+</body>
+</html>
