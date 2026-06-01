@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arfuch Store</title>
+    <link rel="stylesheet" href="/styles/estilos.css">
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/productosCategoria.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo-container">
+        <div class="logo-box">
+            <a href="/">
+            <img src="/images/logoArfuch.jpg" alt="Logo Arfuch" class="logo">
+            </a>
+        </div>
+    <h1 class="titulo-marca">
+    Arfuch <br>
+    Indumentaria
+</h1>
+    </div>
+
+    <nav class="nav">
+    <ul class="menu">
+
+        <li><a href="/">Inicio</a></li>
+
+        <li class="dropdown">
+            <a href="#">Productos ▾</a>
+            <ul class="dropdown-content">
+                <li><a href="/remeras">Remeras</a></li>
+                <li><a href="/buzos">Buzos</a></li>
+                <li><a href="/camperas">Camperas</a></li>
+                <li><a href="/zapatillas">Zapatillas</a></li>
+            </ul>
+        </li>
+
+        <li><a href="/contacto">Contacto</a></li>
+        <li id="usuario-nav"></li>
+
+    </ul>
+</nav>
+
+    <a href="/carrito" class="carrito-icono">
+    🛒 <span id="contador-carrito">0</span>
+</a>
+</header>
+
+<main>
+    <h2>Remeras</h2>
+
+    <div id="contenedor-productos" class="contenedor-productos"></div>
+
+    
+</main>
+
+<footer class="footer">
+    <p>&copy; 1930 Arfuch Indumentaria. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

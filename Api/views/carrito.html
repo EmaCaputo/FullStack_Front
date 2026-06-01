@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arfuch Store</title>
+    <link rel="stylesheet" href="/styles/estilos.css">
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/carritoView.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo-container">
+        <div class="logo-box">
+            <a href="/">
+            <img src="/images/logoArfuch.jpg" alt="Logo Arfuch" class="logo">
+            </a>
+        </div>
+    <h1 class="titulo-marca">
+    Arfuch <br>
+    Indumentaria
+</h1>
+    </div>
+
+    <nav class="nav">
+    <ul class="menu">
+
+        <li><a href="/">Inicio</a></li>
+
+        <li class="dropdown">
+            <a href="#">Productos ▾</a>
+            <ul class="dropdown-content">
+                <li><a href="/remeras">Remeras</a></li>
+                <li><a href="/buzos">Buzos</a></li>
+                <li><a href="/camperas">Camperas</a></li>
+                <li><a href="/zapatillas">Zapatillas</a></li>
+            </ul>
+        </li>
+
+        <li><a href="/contacto">Contacto</a></li>
+        <li id="usuario-nav"></li>
+
+    </ul>
+</nav>
+
+    <a href="/carrito" class="carrito-icono">
+    🛒 <span id="contador-carrito">0</span>
+</a>
+</header>
+
+<main class="carrito-container">
+    <h2>Tu carrito</h2>
+
+    <div id="lista-carrito"></div>
+
+    <h3 id="total">Total: $0</h3>
+
+    <div class="acciones-carrito">
+        <button class="btn-vaciar" id="vaciarCarritoBtn">Vaciar Carrito</button>
+        <button onclick="finalizarCompra()">Finalizar compra</button>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; 1930 Arfuch Indumentaria. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

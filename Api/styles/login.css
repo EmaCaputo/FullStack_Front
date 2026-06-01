@@ -2,10 +2,31 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+}
+
+.btn-register {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+
+    background: linear-gradient(135deg, #000, #333);
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .login-container {
@@ -19,6 +40,13 @@ body {
 .login-container h1 {
     margin-bottom: 10px;
     letter-spacing: 3px;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .login-container h2 {

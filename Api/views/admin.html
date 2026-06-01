@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arfuch Store</title>
+    <link rel="stylesheet" href="/styles/estilos.css">
+    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="/js/admin.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo-container">
+        <div class="logo-box">
+            <a href="/">
+            <img src="/images/logoArfuch.jpg" alt="Logo Arfuch" class="logo">
+            </a>
+        </div>
+    <h1 class="titulo-marca">
+    Arfuch <br>
+    Indumentaria
+</h1>
+    </div>
+
+    <nav class="nav">
+    <ul class="menu">
+
+        <li><a href="/">Inicio</a></li>
+
+        <li class="dropdown">
+            <a href="#">Productos ▾</a>
+            <ul class="dropdown-content">
+                <li><a href="/remeras">Remeras</a></li>
+                <li><a href="/buzos">Buzos</a></li>
+                <li><a href="/camperas">Camperas</a></li>
+                <li><a href="/zapatillas">Zapatillas</a></li>
+            </ul>
+        </li>
+
+        <li><a href="/contacto">Contacto</a></li>
+        <li id="usuario-nav"></li>
+
+    </ul>
+</nav>
+
+    <a href="/carrito" class="carrito-icono">
+    🛒 <span id="contador-carrito">0</span>
+</a>
+</header>
+<main>
+<h2>Panel Admin</h2>
+<h2 id="titulo-form">Crear producto</h2>
+
+<form id="productoForm" class="admin-form">
+
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="marca" placeholder="Marca" required>
+    <input type="text" id="modelo" placeholder="Modelo" required>
+
+    <input type="number" id="precio" placeholder="Precio" required>
+    <input type="number" id="stock" placeholder="Stock" required>
+
+    <input type="text" id="talle" placeholder="Talle (M, 42)" required>
+
+    
+    <select id="categoria"></select>
+    <select id="tipo"></select>
+    <select id="color"></select>
+
+    
+     <input type="text" id="imagen" placeholder="Ej: zapatillasCampus.jpg">
+
+    <img id="preview" width="120">
+
+    <button type="submit" id="btn-submit">Crear Producto</button>
+
+</form>
+
+<h2>Productos existentes</h2>
+
+<div id="lista-productos" class="lista-productos"></div>
+</main>
+<footer class="footer">
+    <p>&copy; 1930 Arfuch Indumentaria. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

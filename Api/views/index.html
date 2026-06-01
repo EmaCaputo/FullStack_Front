@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Arfuch Store</title>
     <link rel="stylesheet" href="/styles/estilos.css">
+    <script type="module" src="/js/main.js"></script>
 </head>
 
 <body>
@@ -24,110 +25,61 @@
     <nav class="nav">
     <ul class="menu">
 
-        <li><a href="#">Inicio</a></li>
+        <li><a href="/">Inicio</a></li>
 
         <li class="dropdown">
             <a href="#">Productos ▾</a>
             <ul class="dropdown-content">
-                <li><a href="#">Remeras</a></li>
-                <li><a href="#">Buzos</a></li>
-                <li><a href="#">Camperas</a></li>
+                <li><a href="/remeras">Remeras</a></li>
+                <li><a href="/buzos">Buzos</a></li>
+                <li><a href="/camperas">Camperas</a></li>
+                <li><a href="/zapatillas">Zapatillas</a></li>
             </ul>
         </li>
 
-        <li><a href="#">Contacto</a></li>
-         <li><a href="/login">Login</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+        <li id="usuario-nav"></li>
 
     </ul>
 </nav>
 
-    <div class="carrito-icono">
-        🛒 <span id="contador-carrito">0</span>
-    </div>
+    <a href="/carrito" class="carrito-icono">
+    🛒 <span id="contador-carrito">0</span>
+</a>
+
 </header>
 
 <main>
-    <h2>Nuestros Productos</h2>
+    <h2 class="titulo-seccion">Categorias</h2>
 
-    <div class="contenedor-productos">
+    <div class="contenedor-categorias">
 
-        <div class="item-producto">
-            <img src="/images/RemeraLacostePima.jpg">
-            <h3>Remera Lacoste Pima</h3>
-            <h4>$5000</h4>
-            <button onclick="agregarAlCarrito('Remera Pima', 5000)">Comprar</button>
-        </div>
+        <a href="/remeras" class="categoria-card">
+            <img src="/images/Remeras.jpg">
+            <div class="overlay">Remeras</div>
+        </a>
 
-        <div class="item-producto">
-            <img src="/images/RemeraLacosteAlgodonEstampa.jpg">
-            <h3>Remera Estampa</h3>
-            <h4>$25000</h4>
-            <button onclick="agregarAlCarrito('Remera Estampa', 25000)">Comprar</button>
-        </div>
+        <a href="/buzos" class="categoria-card">
+            <img src="/images/Buzos.jpg">
+            <div class="overlay">Buzos</div>
+        </a>
 
-        <div class="item-producto">
-            <img src="/images/RemeraLacostePima.jpg">
-            <h3>Remera Premium</h3>
-            <h4>$55000</h4>
-            <button onclick="agregarAlCarrito('Remera Premium', 55000)">Comprar</button>
-        </div>
+        <a href="/camperas" class="categoria-card">
+            <img src="/images/Camperas.jpg">
+            <div class="overlay">Camperas</div>
+        </a>
 
-        <div class="item-producto">
-            <img src="/images/RemeraLacosteAlgodonEstampa.jpg">
-            <h3>Remera Estampa</h3>
-            <h4>$25000</h4>
-            <button onclick="agregarAlCarrito('Remera Estampa', 25000)">Comprar</button>
-        </div>
-
-         <div class="item-producto">
-            <img src="/images/RemeraLacostePima.jpg">
-            <h3>Remera Premium</h3>
-            <h4>$55000</h4>
-            <button onclick="agregarAlCarrito('Remera Premium', 55000)">Comprar</button>
-        </div>
-
-        <div class="item-producto">
-            <img src="/images/RemeraLacosteAlgodonEstampa.jpg">
-            <h3>Remera Estampa</h3>
-            <h4>$25000</h4>
-            <button onclick="agregarAlCarrito('Remera Estampa', 25000)">Comprar</button>
-        </div>
+        <a href="/zapatillas" class="categoria-card">
+            <img src="/images/Zapatillas.jpg">
+            <div class="overlay">Zapatillas</div>
+        </a>
 
     </div>
 </main>
 
-<!-- 🛒 Carrito -->
-<div class="carrito">
-    <h3>Carrito</h3>
-    <div id="lista-carrito"></div>
-    <h4 id="total">Total: $0</h4>
-</div>
 
-<script>
-let carrito = [];
-let total = 0;
-
-function agregarAlCarrito(nombre, precio) {
-    carrito.push({ nombre, precio });
-    total += precio;
-    renderCarrito();
-}
-
-function renderCarrito() {
-    const lista = document.getElementById('lista-carrito');
-    lista.innerHTML = '';
-
-    carrito.forEach(item => {
-        const div = document.createElement('div');
-        div.classList.add('item-carrito');
-        div.innerText = `${item.nombre} - $${item.precio}`;
-        lista.appendChild(div);
-    });
-
-    document.getElementById('total').innerText = `Total: $${total}`;
-
-}
-</script>
-
+<footer class="footer">
+    <p>&copy; 1930 Arfuch Indumentaria. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>
