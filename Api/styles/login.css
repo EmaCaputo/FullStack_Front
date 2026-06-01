@@ -106,3 +106,51 @@ body {
     color: black;
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .nav {
+        display: none; /* ocultamos menú */
+    }
+
+    /* PODÉS después agregar hamburguesa */
+
+    /* CATEGORIAS */
+    .contenedor-categorias {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+
+    /* PRODUCTOS */
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    /* FORM ADMIN */
+    .admin-form {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form button {
+        grid-column: span 1;
+    }
+
+    /* CARRITO */
+    .carrito {
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+
+    main {
+        margin-right: 0;
+    }
+
+    /* HEADER */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

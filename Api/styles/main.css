@@ -1095,3 +1095,54 @@ button {
         grid-template-columns: 2fr 1fr 1fr 1fr;
     }
 }
+
+@media (max-width: 768px) {
+
+    /* NAV */
+    .menu {
+        flex-direction: column;
+        display: none;
+        background: black;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* CATEGORIAS */
+    .contenedor-categorias {
+        grid-template-columns: 1fr;
+    }
+
+    /* HEADER */
+    .header {
+        flex-wrap: wrap;
+    }
+
+}
+
+    .item-producto img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* cuadrado */
+    object-fit: cover;
+}
+
+    .contenedor-productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+  }
+
